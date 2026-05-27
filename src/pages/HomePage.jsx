@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import AppShell from '../components/AppShell';
 import experimentalBundleImg from '../assets/experimental_bundle.png';
+import avatarImg from '../assets/avatar.png';
 
 export default function HomePage({ auth }) {
   return (
@@ -54,12 +56,12 @@ export default function HomePage({ auth }) {
                   We&apos;ve accelerated generosity to 99% the speed of light. Smash atoms, pair preferences, and eliminate the &quot;Awkward Thank You&quot; particle from the universe.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-primary hover:bg-[#d81b60] text-white px-8 py-4 font-label-mono text-label-mono uppercase border-2 border-[#111d23] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 cursor-pointer">
+                  <Link to="/my-gifts" className="inline-block bg-primary hover:bg-[#d81b60] text-white px-8 py-4 font-label-mono text-label-mono uppercase border-2 border-[#111d23] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 cursor-pointer text-center">
                     Initialize Collider
-                  </button>
-                  <button className="bg-white hover:bg-slate-50 text-[#111d23] px-8 py-4 font-label-mono text-label-mono uppercase border-2 border-[#111d23] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 cursor-pointer">
-                    View Raw Data
-                  </button>
+                  </Link>
+                  <Link to="/feeds" className="inline-block bg-white hover:bg-slate-50 text-[#111d23] px-8 py-4 font-label-mono text-label-mono uppercase border-2 border-[#111d23] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 cursor-pointer text-center">
+                    Friends Feed
+                  </Link>
                 </div>
               </div>
 
@@ -259,11 +261,44 @@ export default function HomePage({ auth }) {
             </div>
           </section>
 
+          {/* About the Developer Section */}
+          <section className="relative z-10 mt-16 max-w-4xl mx-auto w-full">
+            <div className="bg-gradient-to-br from-sky-200/95 to-sky-100/95 backdrop-blur-md border-2 border-[#111d23] p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(17,29,35,1)] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(17,29,35,1)] transition-all duration-300 rounded-lg flex flex-col md:flex-row items-center gap-6 md:gap-8 relative overflow-hidden group">
+              {/* Sky blue gradient aesthetic line */}
+              <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500" />
+              
+              {/* Left: Profile Image */}
+              <div className="shrink-0 relative">
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-[#111d23] shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src={avatarImg} 
+                    alt="Developer Ayush Kamble" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-[#111d23] shadow-sm animate-pulse" />
+              </div>
+
+              {/* Right: Text content */}
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block bg-[#00616d] text-white font-label-mono text-[9px] px-2.5 py-0.5 rounded uppercase tracking-wider font-extrabold mb-2.5 shadow-sm">
+                  Developer
+                </span>
+                <h3 className="font-headline-lg text-[22px] md:text-[24px] text-[#111d23] font-extrabold tracking-tight mb-2">
+                  Ayush Kamble
+                </h3>
+                <p className="font-body-sm text-[13.5px] text-slate-700 leading-relaxed font-medium">
+                  Hi, I’m Ayush — a Computer Engineering student from Mumbai who loves building modern web experiences, experimenting with embedded systems, exploring fintech and AI-driven ideas. I enjoy creating projects that are both useful and visually clean, while constantly learning new technologies and improving my skills as a developer.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Footer Section */}
-          <footer className="mt-20 pt-8 pb-12 border-t-2 border-dashed border-white/20 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-[11px] font-label-mono">
+          <footer className="mt-16 pt-8 pb-12 border-t-2 border-dashed border-white/20 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-[11px] font-label-mono">
             <div>
               <span className="font-bold text-white block mb-1 text-[13px] tracking-tight">Gift Collider</span>
-              <span>&copy; 2024 Gift Collider Engineering Lab. No particles were harmed during gifting.</span>
+              <span>&copy; 2026 Gift Collider Engineering Lab. No particles were harmed during gifting.</span>
             </div>
             <div className="flex gap-6">
               <a href="#safety" className="hover:text-white transition-colors">Safety Protocols</a>
@@ -277,4 +312,3 @@ export default function HomePage({ auth }) {
     </div>
   );
 }
-

@@ -24,6 +24,8 @@ npm install
 
 2. Create `.env` from `.env.example` and fill Firebase values.
 
+Optional: set demo credentials shown on the Login screen (`VITE_DEMO_RESEARCHER_ID`, `VITE_DEMO_ACCESS_CODE`).
+
 3. In Firestore, manually add users in collection `users`:
 
 ```json

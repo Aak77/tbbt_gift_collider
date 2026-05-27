@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import avatarImg from '../assets/avatar.png';
+import sheldonAvatar from '../assets/sheldon_avatar.png';
 
 export default function AppShell({ auth, children }) {
   const location = useLocation();
@@ -148,6 +149,31 @@ export default function AppShell({ auth, children }) {
               );
             })}
           </nav>
+
+          {/* Sheldon Cooper Dossier Card */}
+          <div className="border-2 border-[#111d23] bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 rounded">
+            <div className="font-label-mono text-[9px] tracking-wider text-slate-500 uppercase mb-3 font-bold">
+              Made For sheldon Cooper
+            </div>
+            <div className="border-2 border-[#111d23] bg-surface-container-lowest overflow-hidden aspect-square w-full mb-3 rounded relative shadow-sm">
+              <img
+                src={sheldonAvatar}
+                alt="Sheldon Cooper"
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute bottom-2 left-2 bg-[#9cf0ff] text-[#001f24] font-sticker-text text-[9px] px-2 py-0.5 border border-[#111d23] uppercase tracking-wider font-extrabold shadow-sm rounded">
+                Advisor mode: ON
+              </div>
+            </div>
+            <div className="min-w-0">
+              <div className="font-headline-lg-mobile text-[15px] text-[#111d23] font-extrabold tracking-tight">
+                Sheldon Cooper
+              </div>
+              <div className="mt-1.5 font-label-mono text-[10px] text-slate-600 leading-relaxed">
+                Ask for optimal gift collisions. Avoid sock particles.
+              </div>
+            </div>
+          </div>
 
           <button 
             type="button"
