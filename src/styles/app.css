@@ -1,0 +1,118 @@
+@config "../../tailwind.config.js";
+@import "tailwindcss";
+
+/* Tailwind v4 theme tokens (DESIGN.md) */
+@theme {
+  --color-surface: #f4faff;
+  --color-surface-dim: #cfdce4;
+  --color-surface-bright: #f4faff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e9f6fd;
+  --color-surface-container: #e3f0f8;
+  --color-surface-container-high: #ddeaf2;
+  --color-surface-container-highest: #d7e4ec;
+  --color-on-surface: #111d23;
+  --color-on-surface-variant: #5a4044;
+  --color-inverse-surface: #263238;
+  --color-inverse-on-surface: #e6f3fb;
+  --color-outline: #8e6f74;
+  --color-outline-variant: #e3bdc3;
+  --color-surface-tint: #bc004f;
+  --color-primary: #b0004a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d81b60;
+  --color-on-primary-container: #fff2f3;
+  --color-inverse-primary: #ffb2bf;
+  --color-secondary: #625f4f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e5e0cc;
+  --color-on-secondary-container: #666353;
+  --color-tertiary: #00616d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #007c8b;
+  --color-on-tertiary-container: #e2faff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #ffd9de;
+  --color-primary-fixed-dim: #ffb2bf;
+  --color-on-primary-fixed: #3f0016;
+  --color-on-primary-fixed-variant: #90003b;
+  --color-secondary-fixed: #e8e2cf;
+  --color-secondary-fixed-dim: #ccc6b4;
+  --color-on-secondary-fixed: #1e1c10;
+  --color-on-secondary-fixed-variant: #4a4739;
+  --color-tertiary-fixed: #9cf0ff;
+  --color-tertiary-fixed-dim: #00daf3;
+  --color-on-tertiary-fixed: #001f24;
+  --color-on-tertiary-fixed-variant: #004f58;
+  --color-background: #f4faff;
+  --color-on-background: #111d23;
+  --color-surface-variant: #d7e4ec;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --spacing-base: 8px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 40px;
+  --spacing-container-max: 1280px;
+}
+
+/* Shared effects from Stitch pages */
+body {
+  background-attachment: fixed;
+}
+
+.glass-panel {
+  background: rgba(244, 250, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hard-shadow {
+  box-shadow: 4px 4px 0px 0px #b0004a;
+}
+
+.cyan-glow {
+  filter: drop-shadow(0 0 10px rgba(0, 218, 243, 0.6));
+}
+
+.sticker-rotate-pos {
+  transform: rotate(3deg);
+}
+
+.sticker-rotate-neg {
+  transform: rotate(-3deg);
+}
+
+.bg-deep-red-env {
+  background-image: linear-gradient(to bottom right, #4a041c, #700c2f, #310212);
+}
+
+.blueprint-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-red-atmosphere {
+  background-color: #3f0016;
+  background-image:
+    radial-gradient(circle at 20% 30%, #90003b 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, #b0004a 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #5d0027 0%, #3f0016 100%);
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
